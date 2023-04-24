@@ -20,5 +20,4 @@ void printCard(Card card) {
             value = std::to_string(card.value);
             break;
     }
-    std::cout << value << " of " << card.suit << std::endl;
-}
+    std::cout << value << " of " << card.suit << std::endl; )
