@@ -1,0 +1,36 @@
+// Betting function
+void bettingRound(int& currentBet, int& pot, int& playerMoney, bool& folded)
+{
+    int bet;
+    std::cout << "Pot: " << pot << std::endl;
+    std::cout << "Current bet: " << currentBet << std::endl;
+    std::cout << "Your money: " << playerMoney << std::endl;
+    std::cout << "Enter bet amount (0 to check, -1 to fold): ";
+    std::cin >> bet;
+
+    if (bet == -1)
+    {
+        folded = true;
+        return;
+    }
+    else if (bet == 0)
+    {
+        return;
+    }
+    else if (bet < currentBet)
+    {
+        std::cout << "Bet must be at least " << currentBet << std::endl;
+        bettingRound(currentBet, pot, playerMoney, folded);
+        return;
+    }
+    else if (bet > playerMoney)
+    {
+        std::cout << "Not enough money" << std::endl;
+        bettingRound(currentBet, pot, playerMoney, folded);
+        return;
+    }
+
+    playerMoney -= bet;
+    pot += bet;
+    currentBet = bet;
+}
