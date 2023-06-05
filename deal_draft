@@ -1,0 +1,20 @@
+// Deal out the flop (3 community cards)
+void dealFlop(std::vector<Card>& communityCards, Deck& deck)
+{
+    for (int i = 0; i < 3; i++)
+    {
+        communityCards.push_back(deck.drawCard());
+    }
+}
+
+// Deal out the turn (1 community card)
+void dealTurn(std::vector<Card>& communityCards, Deck& deck)
+{
+    communityCards.push_back(deck.drawCard());
+}
+
+// Deal out the river (1 community card)
+void dealRiver(std::vector<Card>& communityCards, Deck& deck)
+{
+    communityCards.push_back(deck.drawCard());
+}
