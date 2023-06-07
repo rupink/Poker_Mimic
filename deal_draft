@@ -6,13 +6,11 @@ void dealFlop(std::vector<Card>& communityCards, Deck& deck)
         communityCards.push_back(deck.drawCard());
     }
 }
-
 // Deal out the turn (1 community card)
 void dealTurn(std::vector<Card>& communityCards, Deck& deck)
 {
     communityCards.push_back(deck.drawCard());
 }
-
 // Deal out the river (1 community card)
 void dealRiver(std::vector<Card>& communityCards, Deck& deck)
 {
