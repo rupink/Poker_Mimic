@@ -1,6 +1,5 @@
 #include "Card.h"
 #include <iostream>
-
 void printCard(Card card) {
     std::string value;
     switch(card.value) {
